@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Digital - Complete Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: #6B46C1;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .navbar nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background-image: url('bg_img.png'); /* Replace with the actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            padding-left: 5%;
+        }
+
+        .hero-content {
+            background: linear-gradient(90deg, #00ffaa, #00b7ff); /* Semi-transparent overlay */
+            padding: 20px;
+            max-width: 400px;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ffa200, #ff6600);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: linear-gradient(90deg, #0072FF, #00C6FF);
+        }
+
+        /* Service Section */
+        .service-section {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 5%;
+            color: #333;
+        }
+
+        .service-card {
+            text-align: center;
+            max-width: 600px;
+            margin: 1rem;
+        }
+
+        .service-card h3 {
+            color: #6B46C1;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .learn-more-button {
+            background-color: #FFA500;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .learn-more-button:hover {
+            background-color: #FF8C00;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #00A1FF;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 2rem 5%;
+            text-align: center;
+            color: #6B46C1;
+        }
+
+        .faq-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #F8F6FF;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #6B46C1;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+            font-size: 0.9rem;
+            color: #333;
+            text-align: left;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+        }
+
+        .faq-question[aria-expanded="true"] + .faq-answer {
+            display: block;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #6B46C1;
+            color: white;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .footer-column {
+            margin-top: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column p, .footer-column a {
+            color: white;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>
+            <img src="C:\Users\DELL\Downloads\testing 01\logo (2).png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo image -->
+            AT DIGITAL
+        </h1>
+        <nav>
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Careers</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>We Crush Your Competitors, Goals, And Sales Records - Without The B.S.</h2>
+            <a href="#" class="hero-button">Get Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Web & Mobile App Development Section -->
+    <section class="service-section">
+        <div class="service-card">
+            <div class="service-icon">📱</div> <!-- Icon can be replaced with an image if needed -->
+            <h3>Web & Mobile App Development</h3>
+            <p>Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks which tailor content and engagement methods to respond to different intents shown by your potential customers who interact with your business online.</p>
+            <a href="#" class="learn-more-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Digital Strategy Consulting Section -->
+    <section class="service-section">
+        <div class="service-card">
+            <div class="service-icon">🔍</div> <!-- Icon can be replaced with an image if needed -->
+            <h3>Digital Strategy Consulting</h3>
+            <p>Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a different mix. We provide a clear concept and strategic overview to find the most efficient model for your business.</p>
+            <a href="#" class="learn-more-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer(this)">
+                    Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
+                    <span class="faq-icon">−</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer(this)">
+                    Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer pulvinar non tincidunt at.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer(this)">
+                    Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc pharetra mollis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="C:\Users\DELL\Downloads\testing 01\logo (2).png" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;"> AT DIGITAL
+            <p>Your goal is our target. Not anything in between. We use online marketing platforms and tools to achieve single objective - your business results.</p>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Our Technologies</h4>
+            <p>ReactJS</p>
+            <p>Gatsby</p>
+            <p>NextJS</p>
+            <p>NodeJS</p>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Our Services</h4>
+            <p>Social Media Marketing</p>
+            <p>Web & Mobile App Development</p>
+            <p>Data & Analytics</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isExpanded = answer.style.display === 'block';
+
+            // Toggle the answer visibility
+            answer.style.display = isExpanded ? 'none' : 'block';
+            
+            // Toggle the icon
+            icon.textContent = isExpanded ? '+' : '−';
+        }
+    </script>
+
+</body>
+</html>
